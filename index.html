@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        align-content: center;
+        background-color: hsl(30, 54%, 90%);
+        margin: 50px;
+      }
+      .container {
+        background-color: hsl(0, 0%, 100%);
+        /* border: 1px solid black; */
+        border-radius: 20px;
+        padding: 30px;
+        margin: 0px auto;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .recipeimage img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .foodteaching {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .foodteaching h1 {
+        font-size: 40px;
+        color: hsl(24, 5%, 18%);
+        font-weight: bold;
+      }
+      .foodteaching p {
+        line-height: 23px;
+        font-size: 16px;
+        font-family: "Rubik", serif;
+        color: hsl(24, 5%, 18%);
+      }
+      .timeforpreparation {
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(330, 100%, 98%);
+        padding: 15px;
+        border-radius: 15px;
+      }
+      .timeforpreparation h3 {
+        font-weight: bold;
+        font-size: 24px;
+        color: hsl(332, 51%, 32%);
+      }
+      .total {
+        color: hsl(24, 5%, 18%);
+        font-size: 18px;
+        font-family: "Rubik", serif;
+        font-weight: bold;
+      }
+      .timeforpreparation ul {
+        color: hsl(332, 51%, 32%);
+        padding: 22px;
+        line-height: 35px;
+        font-size: 16px;
+        opacity: 0.8;
+        font-family: "Rubik", serif;
+      }
+      .time {
+        color: hsl(24, 5%, 18%);
+        font-size: 17px;
+        font-family: "Rubik", serif;
+      }
+      .thingsneeded {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid hsla(60, 18%, 12%, 0.377);
+      }
+      .thingsneeded h2 {
+        font-size: 32px;
+        color: hsl(14, 45%, 36%);
+        font-weight: bold;
+      }
+      .thingsneeded ul {
+        color: hsl(332, 51%, 32%);
+        padding: 22px;
+        line-height: 35px;
+        font-size: 16px;
+        opacity: 0.8;
+        font-family: "Rubik", serif;
+      }
+
+      .things {
+        color: hsl(24, 5%, 18%);
+        font-size: 16px;
+        line-height: 35px;
+        opacity: 0.8;
+        font-family: "Rubik", serif;
+      }
+      .Instructions {
+        border-bottom: 1px solid hsla(60, 18%, 12%, 0.377);
+      }
+      .Instructions h2 {
+        font-size: 32px;
+        color: hsl(14, 45%, 36%);
+        font-weight: bold;
+      }
+      .Instructions ol {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: hsl(332, 51%, 32%);
+        padding: 22px;
+        font-size: 16px;
+        opacity: 0.8;
+        font-family: "Rubik", serif;
+      }
+      .Instructions li {
+        line-height: 25px;
+      }
+      .nutrition {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+      .nutrition h2 {
+        font-size: 32px;
+        color: hsl(14, 45%, 36%);
+        font-weight: bold;
+      }
+      .nutrition p {
+        font-size: 16px;
+        font-family: "Rubik", serif;
+        color: hsl(24, 5%, 18%);
+        opacity: 0.8;
+      }
+      .type1 {
+        display: flex;
+        padding: 5px;
+        gap: 50%;
+        margin-left: 30px;
+      }
+      .calories{
+        width: 50px;
+      }
+      .type3{
+        display: flex;
+        gap: 50%;
+        margin-left: 35px;
+      }
+      @media screen and (max-width: 600px) {
+        .container{
+          width: 100%;
+          border-radius: 0px;
+          padding: 10px;
+          margin: 0px;
+        }
+        body{
+          margin: 0px;
+        }
+        .recipeimage img {
+        width: 100%;
+        border-radius: 0px;
+        padding: 0px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="recipeimage">
+          <img src="./assets/images/image-omelette.jpeg" alt="" />
+        </div>
+        <div class="foodteaching">
+          <h1>Simple Omelette Recipe</h1>
+          <p>
+            An easy and quick dish, perfect for any meal. This classic omelette
+            combines beaten eggs cooked to perfection, optionally filled with
+            your choice of cheese, vegetables, or meats.
+          </p>
+        </div>
+        <div class="timeforpreparation">
+          <h3>Preparation time</h3>
+          <ul>
+            <li>
+              <span class="total">Total: </span
+              ><span class="time">Approximately 10 minutes</span>
+            </li>
+            <li>
+              <span class="total">Preparation: </span
+              ><span class="time">5 minutes</span>
+            </li>
+            <li>
+              <span class="total">Cooking: </span
+              ><span class="time">5 minutes</span>
+            </li>
+          </ul>
+        </div>
+        <div class="thingsneeded">
+          <h2>Ingredients</h2>
+          <ul>
+            <li><span class="things">2-3 large eggs</span></li>
+            <li><span class="things">Salt, to taste</span></li>
+            <li><span class="things">Pepper, to taste</span></li>
+            <li><span class="things">1 tablespoon of butter or oil</span></li>
+            <li>
+              <span class="things"
+                >Optional fillings: cheese, diced vegetables, cooked meats,
+                herbs</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="Instructions">
+          <h2>Instructions</h2>
+          <ol>
+            <li>
+              <span class="total">Beat the eggs: </span
+              ><span class="time"
+                >In a bowl, beat the eggs with a pinch of salt and pepper until
+                they are well mixed. You can add a tablespoon of water or milk
+                for a fluffier texture.</span
+              >
+            </li>
+            <li>
+              <span class="total">Heat the pan: </span
+              ><span class="time"
+                >Place a non-stick frying pan over medium heat and add butter or
+                oil.</span
+              >
+            </li>
+            <li>
+              <span class="total">Cook the omelette: </span
+              ><span class="time"
+                >Once the butter is melted and bubbling, pour in the eggs. Tilt
+                the pan to ensure the eggs evenly coat the surface.</span
+              >
+            </li>
+            <li>
+              <span class="total">Add fillings (optional): </span
+              ><span class="time"
+                >When the eggs begin to set at the edges but are still slightly
+                runny in the middle, sprinkle your chosen fillings over one half
+                of the omelette.</span
+              >
+            </li>
+            <li>
+              <span class="total">Fold and serve: </span
+              ><span class="time"
+                >As the omelette continues to cook, carefully lift one edge and
+                fold it over the fillings. Let it cook for another minute, then
+                slide it onto a plate.</span
+              >
+            </li>
+            <li>
+              <span class="total">Enjoy: </span
+              ><span class="time"
+                >Serve hot, with additional salt and pepper if needed.</span
+              >
+            </li>
+          </ol>
+        </div>
+        <div class="nutrition">
+          <h2>Nutrition</h2>
+          <p>
+            The table below shows nutritional values per serving without the
+            additional fillings.
+          </p>
+          <div class="type1">
+            <p class="calories">Calories</p>
+            <p>277kcal</p>
+          </div><hr>
+          <div class="type1">
+            <p class="calories">Carbs</p>
+            <p>0g</p>
+          </div><hr>
+          <div class="type1">
+            <p class="calories">Protein</p>
+            <p>20g</p>
+          </div><hr>
+          <div class="type3">
+            <p class="calories">Fat</p>
+            <p>22g</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
